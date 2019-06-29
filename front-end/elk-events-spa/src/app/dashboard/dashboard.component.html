@@ -1,0 +1,11 @@
+<section class="box special">
+    <ul class="actions special" style="margin-bottom: 0">
+      <li><a (click)="showBarChart()" class="button alt">Bar Chart</a></li>
+      <li><a (click)="showPieChart()" class="button alt">Pie Chart</a></li>
+    </ul>
+    <header class="major">
+      <input type="text" placeholder="Dashboard Url" [value]="dashboardUrl" (input)="dashboardUrl = $event.target.value"/> 
+      <iframe width="100%" height="600" [src]="dashboardUrl | safe"></iframe>
+    </header>
+</section>
+  
