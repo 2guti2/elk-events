@@ -17,6 +17,7 @@ module.exports = function (app, repo) {
       res.status(400).send({ message: 'Missing event information.' })
       return
     }
+    console.log(event)
     const response = await repo.saveInFile(event)
     res.send(response)
   })

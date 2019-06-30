@@ -1,27 +1,21 @@
 <section class="box special">
   <header class="major">
-    <form id="contact" action="" method="post">
-      <h3>Colorlib Contact Form</h3>
-      <h4>Contact us for custom quote</h4>
-      <fieldset>
-        <input placeholder="Your name" type="text" tabindex="1" required autofocus>
-      </fieldset>
-      <fieldset>
-        <input placeholder="Your Email Address" type="email" tabindex="2" required>
-      </fieldset>
-      <fieldset>
-        <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
-      </fieldset>
-      <fieldset>
-        <input placeholder="Your Web Site (optional)" type="url" tabindex="4" required>
-      </fieldset>
-      <fieldset>
-        <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
-      </fieldset>
-      <fieldset>
-        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-      </fieldset>
-    </form>
+    <h3>New Event</h3>
+    <h4>Use this form to create events that will be reflected in kibana reports</h4>
+    <fieldset>
+      <label style="text-align: left; font-weight: bold">User:</label>
+      <select tabindex="1" [value]="username" (input)="username = $event.target.value" autofocus> 
+        <option value="mgutierrez">mgutierrez</option>
+        <option value="iyim">iyim</option>
+        <option value="pons">pons</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <label style="text-align: left; font-weight: bold">Description:</label>
+      <textarea [value]="description" (input)="description = $event.target.value" placeholder="Description of the event" tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button (click)="submit()" class="btn">Submit</button>
+    </fieldset>
   </header>
-  <span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
 </section>
