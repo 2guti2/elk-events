@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { SafePipe } from './safepipe';
 import { EventService } from './eventform/event.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CreateMessagesComponent } from './create-messages/create-messages.component';
+import { ViewMessagesComponent } from './view-messages/view-messages.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
     EventformComponent,
     DashboardComponent,
     HomeComponent,
-    SafePipe
+    SafePipe,
+    CreateMessagesComponent,
+    ViewMessagesComponent
   ],
   imports: [
     BrowserModule,

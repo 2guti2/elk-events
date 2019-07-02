@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { EventformComponent } from './eventform/eventform.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
+import { CreateMessagesComponent } from './create-messages/create-messages.component';
+import { ViewMessagesComponent } from './view-messages/view-messages.component';
 
 const routes: Routes = [
   {
@@ -12,6 +14,14 @@ const routes: Routes = [
   {
     path: 'dashboards',
     component: DashboardComponent
+  },
+  {
+    path: 'messages/create',
+    component: CreateMessagesComponent
+  },
+  {
+    path: 'messages/view',
+    component: ViewMessagesComponent
   },
   {
     path: '',
