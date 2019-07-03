@@ -4,14 +4,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class EventService {
+export class ApiMessagesService {
 
   constructor(private http: HttpClient) { }
 
-  async save(event) {
+  async save(msg) {
     const _options = { headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })};
-    return this.http.post(`http://localhost:8000/events`, event, _options).toPromise();
+    return this.http.post(`http://localhost:8001/messages`, msg, _options).toPromise();
   }
 }

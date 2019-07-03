@@ -1,3 +1,10 @@
-<p>
-  create-messages works!
-</p>
+<section class="box special">
+  <header class="major">
+    <h3>Create Messages</h3>
+    <h4>Choose any form you want, they just need to have a title</h4>
+    <json-editor [options]="editorOptions" [data]="data"></json-editor>
+    <fieldset>
+      <button class="btn btn-secondary" (click)="send()">Send</button>
+    </fieldset>
+  </header>
+</section>

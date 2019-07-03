@@ -1,3 +1,18 @@
-<p>
-  view-messages works!
-</p>
+<section class="box special">
+  <header class="major">    
+    <h3>View Messages</h3>
+    <h4>Send new messages and watch them appear in this screen using socket.io</h4>
+    <div class="col-inside-lg decor-default">
+      <div class="chat-body">
+        <div id="chat-messages">
+          <div *ngFor="let msg of messages; let i = index" class="answer left">
+            <div class="text">{{ msg.msg }}</div>
+            <div *ngIf="i == messages.length-1" class="time">{{ msg.time }}</div>
+            <div *ngIf="i != messages.length-1" style="height: 15px"></div>
+          </div>
+        </div>
+        <div class="answer-add" style="background: transparent"></div>
+      </div>
+    </div>
+  </header>
+</section>

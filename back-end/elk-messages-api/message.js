@@ -9,7 +9,7 @@ let MessageSchema = new Schema(
       max: 100 
     }
   },
-  { strict: false }
+  { strict: false, timestamps: true }
 )
 
 module.exports = mongoose.model('Message', MessageSchema)

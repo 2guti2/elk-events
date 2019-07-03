@@ -8,7 +8,7 @@ function hasOwnProps(propsArray, obj) {
 
 const reqProps = ['title']
 
-module.exports = function (app, repo) {
+module.exports = function (app, repo, socket) {
   app.get('/messages', async (req, res) => {
     const messages = await repo.readMessages()
     res.send(messages)
@@ -21,6 +21,7 @@ module.exports = function (app, repo) {
       return
     }
     const response = await repo.createMessage(message)
+    socket.emit('response', response.title)
     res.send(response)
   })
 };

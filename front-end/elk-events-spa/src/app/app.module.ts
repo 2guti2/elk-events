@@ -11,6 +11,11 @@ import { EventService } from './eventform/event.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateMessagesComponent } from './create-messages/create-messages.component';
 import { ViewMessagesComponent } from './view-messages/view-messages.component';
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { NgJsonEditorModule } from 'ang-jsoneditor';
+ 
+const config: SocketIoConfig = { url: 'http://localhost:8001', options: {} };
+
 
 @NgModule({
   declarations: [
@@ -25,7 +30,9 @@ import { ViewMessagesComponent } from './view-messages/view-messages.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SocketIoModule.forRoot(config),
+    NgJsonEditorModule
   ],
   providers: [EventService],
   bootstrap: [AppComponent]
