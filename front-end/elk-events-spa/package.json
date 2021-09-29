@@ -22,7 +22,7 @@
     "alertifyjs": "^1.11.4",
     "ang-jsoneditor": "^1.8.0",
     "core-js": "^2.5.4",
-    "jsoneditor": "^6.1.0",
+    "jsoneditor": "^9.5.6",
     "ngx-socket-io": "^2.1.1",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
